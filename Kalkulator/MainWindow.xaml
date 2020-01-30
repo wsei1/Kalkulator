@@ -1,0 +1,52 @@
+﻿<Window x:Class="Kalkulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kalkulator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--Dodawanie przycisków z cyframi-->
+
+        <Button x:Name="guzi7" Background="CornflowerBlue" Grid.Row="2" Grid.Column="0" Click="Guzi7_Click">7</Button>
+        <Button x:Name="guzi8" Background="CornflowerBlue" Grid.Row="2" Grid.Column="1" Click="Guzi8_Click">8</Button>
+        <Button x:Name="guzi9" Background="CornflowerBlue" Grid.Row="2" Grid.Column="2" Click="Guzi9_Click">9</Button>
+        <Button x:Name="guzi4" Background="CornflowerBlue" Grid.Row="3" Grid.Column="0" Click="Guzi4_Click">4</Button>
+        <Button x:Name="guzi5" Background="CornflowerBlue" Grid.Row="3" Grid.Column="1" Click="Guzi5_Click">5</Button>
+        <Button x:Name="guzi6" Background="CornflowerBlue" Grid.Row="3" Grid.Column="2" Click="Guzi6_Click">6</Button>
+        <Button x:Name="guzi1" Background="CornflowerBlue" Grid.Row="4" Grid.Column="0" Click="Guzi1_Click">1</Button>
+        <Button x:Name="guzi2" Background="CornflowerBlue" Grid.Row="4" Grid.Column="1" Click="Guzi2_Click">2</Button>
+        <Button x:Name="guzi3" Background="CornflowerBlue" Grid.Row="4" Grid.Column="2" Click="Guzi3_Click">3</Button>
+        <Button x:Name="guzi0" Background="CornflowerBlue" Grid.Row="5" Grid.Column="1" Click="Guzi0_Click">0</Button>
+        <!--Dodawanie przycisków działań-->
+        <Button x:Name="guziPlus"  Grid.Row="1" Grid.Column="3" Click="GuziPlus_Click">+</Button>
+        <Button x:Name="guziMinus"  Grid.Row="2" Grid.Column="3" Click="GuziMinus_Click">-</Button>
+        <Button x:Name="guziDziel"  Grid.Row="3" Grid.Column="3" Click="GuziDziel_Click">/</Button>
+        <Button x:Name="guziMnóż"  Grid.Row="4" Grid.Column="3" Click="GuziMnóż_Click">x</Button>
+        <Button x:Name="guziWynik"  Grid.Row="5" Grid.Column="3" Click="GuziWynik_Click">=</Button>
+        <!--Guziki do kasowania oraz backspace-->
+        <Button x:Name="guziKasuj"  Grid.Row="1" Grid.Column="0" Click="GuziKasuj_Click">KASUJ</Button>
+        <Button x:Name="guziBack"  Grid.Row="1" Grid.Column="1" Click="GuziBack_Click">Backspace</Button>
+        <!--Guzik zaokrąglenia-->
+        <Button x:Name="guziPluMi"  Grid.Row="5" Grid.Column="0" Click="GuziPluMi_Click">+-</Button>
+        <!--Wyświetlenie obliczeń, IsReadOnly == blokada dla użytkownika-->
+        <TextBox x:Name="txtWyswietlaj"  IsReadOnly="True" TextAlignment="Right" VerticalAlignment="Bottom" FontSize="30" BorderThickness="0" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">0</TextBox>
+
+
+    </Grid>
+</Window>
