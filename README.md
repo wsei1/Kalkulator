@@ -1,0 +1,2 @@
+# Kalkulator
+Projekt na zaliczenie
